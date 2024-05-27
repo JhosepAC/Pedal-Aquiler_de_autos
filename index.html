@@ -41,7 +41,7 @@
         <div class="button_container">
             <button class="join_button" data-en="Join" data-es="Únete">Únete</button>
         </div>
-    </nav>          
+    </nav>        
 
     <section class="home_container" id="home">
         <div class="information_container">
@@ -716,103 +716,89 @@
 <script>
     document.addEventListener("DOMContentLoaded", function() {
 
-        var loaderContainer = document.querySelector('.loader_container');
-    
-        // Obtener todas las imágenes de la página
-        var images = document.querySelectorAll('img');
-        var totalImages = images.length;
-        var loadedImages = 0;
+    var loaderContainer = document.querySelector('.loader_container');
+    var images = document.querySelectorAll('img');
+    var totalImages = images.length;
+    var loadedImages = 0;
 
-        // Función para verificar si todas las imágenes se han cargado
-        function checkAllImagesLoaded() {
-            loadedImages++;
-            if (loadedImages === totalImages) {
-                // Todas las imágenes se han cargado, ocultar la pantalla de carga
-                loaderContainer.style.display = 'none';
-            }
+    function checkAllImagesLoaded() {
+        loadedImages++;
+        if (loadedImages === totalImages) {
+            loaderContainer.style.display = 'none';
         }
+    }
 
-        // Escuchar el evento load de cada imagen
-        images.forEach(function(image) {
-            if (image.complete) {
-                // Si la imagen ya está cargada, contarla como cargada
-                checkAllImagesLoaded();
-            } else {
-                // Si la imagen no está cargada, esperar a que se cargue
-                image.addEventListener('load', checkAllImagesLoaded);
-            }
-        });
-    
-        function changeLinkState() {
-            let index = sections.length;
+    images.forEach(function(image) {
+        if (image.complete) {
+            checkAllImagesLoaded();
+        } else {
+            image.addEventListener('load', checkAllImagesLoaded);
+        }
+    });
 
-            while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav_link");
 
-            navLinks.forEach((link) => link.classList.remove("active"));
+    function changeLinkState() {
+        let index = sections.length;
+
+        while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+        navLinks.forEach((link) => link.classList.remove("active"));
+        if (index >= 0) {
             navLinks[index].classList.add("active");
         }
+    }
 
-        changeLinkState();
-        window.addEventListener("scroll", changeLinkState);
+    changeLinkState();
+    window.addEventListener("scroll", changeLinkState);
 
     });
 
     const brandButtons = document.querySelectorAll('.brand');
     const cars = document.querySelectorAll('.car');
 
-    // Agregar evento de clic a cada botón de marca
     brandButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Remover la clase 'selected' de todos los botones de marca
-            brandButtons.forEach(btn => {
-                btn.classList.remove('selected');
-            });
-            // Agregar la clase 'selected' solo al botón clickeado
-            button.classList.add('selected');
-        });
+    button.addEventListener('click', () => {
+        brandButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+    });
     });
 
-
-    // Mostrar solo los autos de Honda al cargar la página
     cars.forEach(car => {
-        if (car.getAttribute('data-brand') === 'honda') {
-            car.style.display = 'flex';
-        } else {
-            car.style.display = 'none';
-        }
+    if (car.getAttribute('data-brand') === 'honda') {
+        car.style.display = 'flex';
+    } else {
+        car.style.display = 'none';
+    }
     });
 
     brandButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const brand = button.getAttribute('data-brand');
+    button.addEventListener('click', () => {
+        const brand = button.getAttribute('data-brand');
 
-            cars.forEach(car => {
-                if (car.getAttribute('data-brand') === brand) {
-                    car.style.display = 'flex';
-                } else {
-                    car.style.display = 'none';
-                }
-            });
+        cars.forEach(car => {
+            if (car.getAttribute('data-brand') === brand) {
+                car.style.display = 'flex';
+            } else {
+                car.style.display = 'none';
+            }
         });
-
-
+    });
     });
 
-    // Mostrar modal al hacer clic en "Ver lista"
     document.querySelector('.see_list').addEventListener('click', function() {
-        document.getElementById('departmentModal').style.display = 'block';
+    document.getElementById('departmentModal').style.display = 'block';
     });
 
-    // Ocultar modal al hacer clic en el botón de cierre (x)
     document.querySelector('.close').addEventListener('click', function() {
-        document.getElementById('departmentModal').style.display = 'none';
+    document.getElementById('departmentModal').style.display = 'none';
     });
 
-    // Ocultar modal al hacer clic fuera del contenido del modal
     window.addEventListener('click', function(event) {
-        if (event.target == document.getElementById('departmentModal')) {
-            document.getElementById('departmentModal').style.display = 'none';
-        }
+    if (event.target == document.getElementById('departmentModal')) {
+        document.getElementById('departmentModal').style.display = 'none';
+    }
     });
 
 </script>
