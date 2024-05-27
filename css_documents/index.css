@@ -104,6 +104,11 @@ body{
     transition: .3s;
 }
 
+.nav_links li a.active {
+    background-color: #323f54;
+    color: #fff;
+}
+
 .nav_links li a:hover {
     background-color: #323f54;
     color: #fff;
