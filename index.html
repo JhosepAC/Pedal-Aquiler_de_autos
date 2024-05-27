@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedal</title>
+    <link rel="icon" href="pictures/logo.png">
+    <link rel="stylesheet" href="css_documents/reset.css">
+    <link rel="stylesheet" href="css_documents/index.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-straight/css/uicons-solid-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <script src="https://kit.fontawesome.com/63a734d1c2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="loader_container">
+        <video src="pictures/car_loader.mp4" autoplay muted loop></video>
+    </div>
+
+    <nav class="nav_container">
+        <div class="logo_container">
+            <img class="logo" src="pictures/logo.png" alt="Logo Pedal | No se ha podido cargar correctamente la imagen">
+            <h1 data-en="PEDAL" data-es="PEDAL">PEDAL</h1>
+        </div>
+        <ul class="nav_links">
+            <li><a href="#home" class="nav_link">Inicio</a></li>
+            <li><a href="#howDoesItWork" class="nav_link">Cómo funciona</a></li>
+            <li><a href="#topCars" class="nav_link">Alquiler</a></li>
+            <li><a href="#service" class="nav_link">¿Por qué elegirnos?</a></li>
+            <li><a href="#contact" class="nav_link">Contáctanos</a></li>
+        </ul>
+        <div class="button_container">
+            <button class="join_button" data-en="Join" data-es="Únete">Únete</button>
+        </div>
+    </nav>          
+
+    <section class="home_container" id="home">
+        <div class="information_container">
+            <h2 class="slogan">Libertad sobre ruedas a tu disposición.</h2>
+            <p>Encuentra un carro y maneja a gusto.</p>
+    
+            <div class="form_container">
+                <form>
+                    <div class="row">
+                        <div class="group">
+                            <label for="tipo_carro">Selecciona tu tipo de carro:</label>
+                            <select id="tipo_carro" name="tipo_carro">
+                                <option value="" selected disabled>Selecciona una opción...</option>
+                                <option value="compacto">Compacto</option>
+                                <option value="sedán">Sedán</option>
+                                <option value="SUV">SUV</option>
+                                <option value="camioneta">Camioneta</option>
+                            </select>
+                        </div>
+                        <div class="group">
+                            <label for="fecha_uso">Fecha de uso:</label>
+                            <input type="date" id="fecha_uso" name="fecha_uso">
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="group">
+                            <label for="hora_recoger">Hora de recojo:</label>
+                            <input type="time" id="hora_recoger" name="hora_recoger">
+                        </div>
+                        <div class="group">
+                            <label for="lugar_recoger">Lugar de recojo:</label>
+                            <select id="lugar_recoger" name="lugar_recoger">
+                                <option value="" selected disabled>Selecciona una opción</option>
+                                <option value="lugar1">Miraflores</option>
+                                <option value="lugar2">San Isidro</option>
+                                <option value="lugar3">San Miguel</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div class="group">
+                            <label for="hora_devolver">Hora de devolución:</label>
+                            <input type="time" id="hora_devolver" name="hora_devolver">
+                        </div>
+                        <div class="group">
+                            <label for="lugar_devolver">Lugar de devolución:</label>
+                            <select id="lugar_devolver" name="lugar_devolver">
+                                <option value="" selected disabled>Selecciona una opción</option>
+                                <option value="lugar1">Miraflores</option>
+                                <option value="lugar2">San Isidro</option>
+                                <option value="lugar3">San Miguel</option>
+                            </select>
+                        </div>
+                    </div>
+                
+                    <div class="group">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>                                                          
+            </div>
+    
+        </div>
+        <div class="picture_information_container">
+            <img src="pictures/car_nissan_home.png" alt="Nissan | La imagen no ha podido cargar correctamente.">
+        </div>
+    </section>    
+
+    <section class="howDoesItWork" id="howDoesItWork">
+        <div class="how_does_it_work_container">
+            <h2>Cómo Funciona</h2>
+            <p>Alquilar un auto con nosotros es fácil y conveniente. <br> Siga estos simples pasos para comenzar su viaje con el vehículo perfecto.</p>
+            <div class="steps_container">
+                <div class="step_container">
+                    <div class="steps"><i class="fi fi-ss-marker"></i></div>
+                    <span>Seleccionar un lugar</span>
+                    <p>Elija la ubicación donde desea recoger su auto de alquiler. Ofrecemos una amplia variedad de lugares en todo el Perú para su comodidad.</p>
+                </div>
+                <div class="step_container">
+                    <div class="steps step2"><i class="fi fi-ss-calendar-clock"></i></div>
+                    <span>Establecer una fecha</span>
+                    <p>Determine las fechas y horas en las que necesita el auto. Ofrecemos flexibilidad para adaptarnos a sus planes de viaje.</p>
+                </div>
+                <div class="step_container">
+                    <div class="steps"><i class="fi fi-ss-taxi"></i></div>
+                    <span>Recoger su auto</span>
+                    <p>En la fecha y hora establecida, diríjase a la ubicación seleccionada para recoger su auto. Nuestro equipo estará listo para asistirle y asegurarse de que todo esté en orden.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+
+    <section class="topCars" id="topCars">
+        <div class="top_cars_container">
+            <h2>Coches más valorados</h2>
+            <p class="subtitle">
+                ¡Descubre los vehículos más codiciados! <br> Explora nuestra selección exclusiva de autos más rentados y viaja con estilo y comodidad. <br> Nuestra colección garantiza una experiencia de conducción inigualable. Reserva ahora y experimenta la excelencia en cada viaje.
+            </p>            
+            <div class="brands">
+                <button class="brand" data-brand="honda"><img src="pictures/honda_logo.png" alt="Honda"> Honda</button>
+                <button class="brand" data-brand="chevrolet"><img src="pictures/chevrolet_logo.png" alt="Chevrolet"> Chevrolet</button>
+                <button class="brand" data-brand="volvo"><img src="pictures/volvo_logo.png" alt="Volvo"> Volvo</button>
+                <button class="brand" data-brand="mitsubishi"><img src="pictures/mitsubishi_logo.png" alt="Mitsubishi"> Mitsubishi</button>
+                <button class="brand" data-brand="volkswagen"><img src="pictures/volkswagen_logo.png" alt="Volkswagen"> Volkswagen</button>
+            </div>
+    
+            <div class="cars">
+                <!-- Honda Cars -->
+                <div class="car" data-brand="honda">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_honda_1.png" alt="Honda Civic">
+                    <h2>Honda Civic</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>12Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 800/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="honda">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_honda_2.png" alt="Honda Accord">
+                    <h2>Honda Accord</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings-sliders"></i><span>Manual</span>
+                        <i class="fi fi-sr-dashboard"></i><span>11Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 900/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="honda">
+                    <span class="fuel-type">Diesel</span>
+                    <img src="pictures/car_honda_3.png" alt="Honda CR-V">
+                    <h2>Honda CR-V</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>14Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 950/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <!-- Chevrolet Cars -->
+                <div class="car" data-brand="chevrolet">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_chevrolet_1.png" alt="Chevrolet Spark">
+                    <h2>Chevrolet Spark</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>4</span>
+                        <i class="fi fi-sr-settings-sliders"></i><span>Manual</span>
+                        <i class="fi fi-sr-dashboard"></i><span>16Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 700/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="chevrolet">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_chevrolet_2.png" alt="Chevrolet Cruze">
+                    <h2>Chevrolet Cruze</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>13Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 850/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="chevrolet">
+                    <span class="fuel-type">Diesel</span>
+                    <img src="pictures/car_chevrolet_3.png" alt="Chevrolet Trailblazer">
+                    <h2>Chevrolet Trailblazer</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>7</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>10Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1000/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <!-- Volvo Cars -->
+                <div class="car" data-brand="volvo">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_volvo_1.png" alt="Volvo XC40">
+                    <h2>Volvo XC40</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>15Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1200/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="volvo">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_volvo_2.png" alt="Volvo S60">
+                    <h2>Volvo S60</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings-sliders"></i><span>Manual</span>
+                        <i class="fi fi-sr-dashboard"></i><span>12Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1100/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="volvo">
+                    <span class="fuel-type">Diesel</span>
+                    <img src="pictures/car_volvo_3.png" alt="Volvo XC90">
+                    <h2>Volvo XC90</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>7</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>9Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1500/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <!-- Mitsubishi Cars -->
+                <div class="car" data-brand="mitsubishi">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_mitsubishi_1.png" alt="Mitsubishi Mirage">
+                    <h2>Mitsubishi Mirage</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings-sliders"></i><span>Manual</span>
+                        <i class="fi fi-sr-dashboard"></i><span>17Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 600/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="mitsubishi">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_mitsubishi_2.png" alt="Mitsubishi Lancer">
+                    <h2>Mitsubishi Lancer</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>12Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 900/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="mitsubishi">
+                    <span class="fuel-type">Diesel</span>
+                    <img src="pictures/car_mitsubishi_3.png" alt="Mitsubishi Pajero">
+                    <h2>Mitsubishi Pajero</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>7</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>10Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1400/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <!-- Volkswagen Cars -->
+                <div class="car" data-brand="volkswagen">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_volkswagen_1.png" alt="Volkswagen Polo">
+                    <h2>Volkswagen Polo</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings-sliders"></i><span>Manual</span>
+                        <i class="fi fi-sr-dashboard"></i><span>18Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 700/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="volkswagen">
+                    <span class="fuel-type">Diesel</span>
+                    <img src="pictures/car_volkswagen_2.png" alt="Volkswagen Passat">
+                    <h2>Volkswagen Passat</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>5</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>14Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 950/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+                <div class="car" data-brand="volkswagen">
+                    <span class="fuel-type">Petrol</span>
+                    <img src="pictures/car_volkswagen_3.png" alt="Volkswagen Tiguan">
+                    <h2>Volkswagen Tiguan</h2>
+                    <div class="details">
+                        <i class="fi fi-sr-seat-airline"></i><span>7</span>
+                        <i class="fi fi-sr-settings"></i><span>Automático</span>
+                        <i class="fi fi-sr-dashboard"></i><span>12Km/1-lt</span>
+                    </div>
+                    <p class="price">Desde S/. 1200/Día</p>
+                    <div class="buttons">
+                        <button class="details-button">Detalles</button>
+                        <button class="book-button">Rentar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>       
+
+    <div class="peruSection">
+        <div class="peru_container">
+            <h2>Encuéntranos en el Perú</h2>
+            <p class="subtitle">Descubre dónde ofrecemos nuestro servicio en diferentes regiones del Perú. <a href="#" class="see_list">Ver lista aquí</a></p>
+            
+            <div class="searchBar">
+                <input type="text" placeholder="Ingrese el tipo de carro que busca...">
+                <button class="searchButton">Buscar</button>            
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124876.93912434446!2d-77.11147080911215!3d-12.015659868535264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima!5e0!3m2!1ses-419!2spe!4v1716414091126!5m2!1ses-419!2spe" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <!-- Modal -->
+            <div class="modal" id="departmentModal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Departamentos donde nos encontramos</h2>
+                    <ul>
+                        <li>Lima</li>
+                        <li>Ica</li>
+                        <li>Arequipa</li>
+                        <li>Ancash</li>
+                        <li>Piura</li>
+                </div>
+            </div>
+        </div>
+  
+    </div>       
+
+    <section class="featureServices" id="service">
+        <div class="feature_services_container">
+        <h2>Nuestro Servicio</h2>
+        <p class="subtitle">
+            Ofrecemos una amplia variedad de vehículos de alta calidad, atención al cliente 24/7 y opciones de reserva flexibles. Nuestras tarifas competitivas y ubicaciones convenientes garantizan que tu experiencia de alquiler sea sencilla y placentera. Con nosotros, cada viaje es una experiencia premium.
+        </p>
+        <div class="content">
+            <img src="pictures/volkswagen_taigun_gt.png" alt="Volkswagen Car" class="car-image">
+            <div class="features">
+                <div class="feature">
+                    <div class="icon customer-support">
+                        <i class="fi fi-ss-chatbot"></i>
+                    </div>
+                    <div class="description">
+                        <h2>Servicio al cliente</h2>
+                        <p>Ofrecemos atención al cliente 24/7 para resolver todas tus dudas y garantizar una experiencia sin preocupaciones.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon many-locations">
+                        <i class="fi fi-ss-map-marker"></i>
+                    </div>
+                    <div class="description">
+                        <h2>Lugares estratégicos</h2>
+                        <p>Nuestras ubicaciones estratégicas te permiten recoger y devolver tu vehículo de manera fácil y conveniente.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="icon free-cancellation">
+                        <i class="fi fi-ss-feedback-review"></i>
+                    </div>
+                    <div class="description">
+                        <h2>Servicio eficiente</h2>
+                        <p>Disfruta de un servicio rápido y eficiente que te permite comenzar tu viaje sin demoras.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <div class="user_opinion">
+        <h2>Lo que dicen nuestros usuarios de nosotros</h2>
+        <div class="user_opinion_container">
+            <!-- PRIMER USUARIO -->
+            <div class="user">
+                <div class="profile">
+                    <div class="profile_img">
+                        <img src="pictures/fatima.png" alt="">
+                    </div>
+                    <div class="name_stars">
+                        <span>Fátima Encarnación</span>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input checked="" type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" >
+                                  <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                    <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                          </div>                          
+                    </div>
+            </div>
+                <div class="opinion">
+                    <p>
+                        ¡Increíble experiencia con la plataforma de alquiler de autos! Reservar fue fácil, la variedad de opciones fue genial y el servicio al cliente fue impecable. ¡Definitivamente volveré a usarla!
+                    </p>
+                </div>
+            </div>
+            <!-- SEGUNDO USUARIO -->
+            <div class="user">
+                <div class="profile">
+                    <div class="profile_img">
+                        <img src="pictures/sebastian.jpg" alt="">
+                    </div>
+                    <div class="name_stars">
+                        <span>Sebastian Ramirez</span>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input checked="" type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" >
+                                  <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                    <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                          </div>                          
+                    </div>
+            </div>
+                <div class="opinion">
+                    <p>
+                        La plataforma de alquiler de autos superó mis expectativas. Fácil de usar, gran selección de vehículos y atención al cliente excepcional. ¡100% recomendado!
+                    </p>
+                </div>
+            </div>
+            <!-- TERCER USUARIO -->
+            <div class="user">
+                <div class="profile">
+                    <div class="profile_img">
+                        <img src="pictures/luis.png" alt="">
+                    </div>
+                    <div class="name_stars">
+                        <span>Luis Diaz</span>
+                        <div class="rating">
+                            <input type="radio" id="star5" name="rate" value="5" />
+                                <label for="star5" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star4" name="rate" value="4" />
+                                <label for="star4" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input checked="" type="radio" id="star3" name="rate" value="3" />
+                                <label for="star3" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star2" name="rate" value="2" />
+                                <label for="star2" >
+                                  <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                    <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                            <input type="radio" id="star1" name="rate" value="1" />
+                                <label for="star1" >
+                                    <svg viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg" class="star-solid">
+                                        <path style="fill: #ff9e0b;" d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"></path>
+                                    </svg>
+                                </label>
+                          </div>                          
+                    </div>
+            </div>
+                <div class="opinion">
+                    La plataforma de alquiler de autos es fantástica. La interfaz es intuitiva, la selección de vehículos es amplia y el servicio al cliente es excelente. ¡Altamente recomendado!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="contact" id="contact">
+        <div class="contact_container">
+            <div class="contact_text_container">
+                <span>Entérate antes que todos de nuestras promociones en alquiler de autos.</span>
+                <p>
+                    Suscríbete a nuestro boletín y recibe nuestras promociones y novedades antes que el resto.
+                </p>
+            </div>
+            <div class="subscription">
+                <form>
+                    <input class="correo" placeholder="Ingrese su correo electrónico" type="email" id="correo" name="correo"><br><br>
+                    <input type="submit" value="Enviar" class="send">
+                </form>
+                <div class="checkbox_container">
+                    <label style="cursor: pointer;">
+                        <input type="checkbox">
+                        <svg viewBox="0 0 64 64" height="1em" width="1em" style="margin-right: 15px;">
+                          <path d="M 0 16 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 16 L 32 48 L 64 16 V 8 A 8 8 90 0 0 56 0 H 8 A 8 8 90 0 0 0 8 V 56 A 8 8 90 0 0 8 64 H 56 A 8 8 90 0 0 64 56 V 16" pathLength="575.0541381835938" class="path"></path>
+                        </svg>
+                    </label>
+                    <span>Al continuar acepta las <a href="#" style="color: #ff9e0b; opacity: .8;">condiciones de servicio</a> y <a href="#" style="color: #ff9e0b; opacity: .8;">política de privacidad</a> de la empresa.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="brands_container">
+        <div class="logos_container">
+            <img src="pictures/logo_audi.png" alt="">
+            <img src="pictures/logo_ford.png" alt="">
+            <img src="pictures/logo_honda.png" alt="">
+            <img src="pictures/logo_jeep.png" alt="">
+            <img src="pictures/logo_mercedes.png" alt="">
+            <img src="pictures/logo_mitsubishi.png" alt="">
+            <img src="pictures/logo_volkswagen.png" alt="">
+            <img src="pictures/logo_volvo.png" alt="">
+        </div>
+    </div>
+
+    <footer class="new_footer_area bg_color">
+        <div class="new_footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget company_widget wow fadeInLeft" data-wow-delay="0.2s" style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                            <div class="data_contact_logo">
+                                <img src="pictures/logo.png" alt="Logo PEDAL">
+                                <span>PEDAL</span>
+                            </div>
+                            <div class="data_contact">
+                                <p><i class="fi fi-rr-envelope"></i> <a href="mailto:jhosepjamil@gmail.com">serviciopedal@pedal.pe</a></p>
+                                <p><i class="fi fi-tr-phone-call"></i> <a href="tel:+123456789">(511) 204 4400</a></p>
+                                <p><i class="fi fi-rs-land-layer-location"></i> La Libertad 255, La Molina</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.4s" style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Vehículos</h3>
+                            <ul class="list_unstyled f_list">
+                                <li><a href="#">Sedán</a></li>
+                                <li><a href="#">Coupé</a></li>
+                                <li><a href="#">Hatchback</a></li>
+                                <li><a href="#">Descapotable</a></li>
+                                <li><a href="#">Familiar (Station Wagon)</a></li>
+                                <li><a href="#">Ver todos</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget about-widget pl_70 wow fadeInLeft" data-wow-delay="0.6s" style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Ayuda</h3>
+                            <ul class="list-unstyled f_list">
+                                <li><a href="#">Preguntas frecuentes</a></li>
+                                <li><a href="#">Términos y condiciones</a></li>
+                                <li><a href="#">Reportar</a></li>
+                                <li><a href="#">Documentación</a></li>
+                                <li><a href="#">Política de la empresa</a></li>
+                                <li><a href="#">Privacidad</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="f_widget social-widget pl_70 wow fadeInLeft" data-wow-delay="0.8s" style="visibility: visible; animation-delay: 0.8s; animation-name: fadeInLeft;">
+                            <h3 class="f-title f_600 t_color f_size_18">Redes sociales</h3>
+                            <div class="f_social_icon">
+                                <ul>
+                                    <li><a href="#" class="fa-brands fa-facebook"></a></li>
+                                    <li><a href="#" class="fa-brands fa-whatsapp"></a></li>
+                                    <li><a href="#" class="fa-brands fa-instagram"></a></li>
+                                    <li><a href="#" class="fa-brands fa-x-twitter"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bg">
+                <div class="footer_bg_one"></div>
+                <div class="footer_bg_two"></div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-7">
+                        <p class="mb-0 f_400">© Pedal 2024 Todos los derechos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        var loaderContainer = document.querySelector('.loader_container');
+    
+        // Obtener todas las imágenes de la página
+        var images = document.querySelectorAll('img');
+        var totalImages = images.length;
+        var loadedImages = 0;
+
+        // Función para verificar si todas las imágenes se han cargado
+        function checkAllImagesLoaded() {
+            loadedImages++;
+            if (loadedImages === totalImages) {
+                // Todas las imágenes se han cargado, ocultar la pantalla de carga
+                loaderContainer.style.display = 'none';
+            }
+        }
+
+        // Escuchar el evento load de cada imagen
+        images.forEach(function(image) {
+            if (image.complete) {
+                // Si la imagen ya está cargada, contarla como cargada
+                checkAllImagesLoaded();
+            } else {
+                // Si la imagen no está cargada, esperar a que se cargue
+                image.addEventListener('load', checkAllImagesLoaded);
+            }
+        });
+    
+        function changeLinkState() {
+            let index = sections.length;
+
+            while(--index && window.scrollY + 50 < sections[index].offsetTop) {}
+
+            navLinks.forEach((link) => link.classList.remove("active"));
+            navLinks[index].classList.add("active");
+        }
+
+        changeLinkState();
+        window.addEventListener("scroll", changeLinkState);
+
+    });
+
+    const brandButtons = document.querySelectorAll('.brand');
+    const cars = document.querySelectorAll('.car');
+
+    // Agregar evento de clic a cada botón de marca
+    brandButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remover la clase 'selected' de todos los botones de marca
+            brandButtons.forEach(btn => {
+                btn.classList.remove('selected');
+            });
+            // Agregar la clase 'selected' solo al botón clickeado
+            button.classList.add('selected');
+        });
+    });
+
+
+    // Mostrar solo los autos de Honda al cargar la página
+    cars.forEach(car => {
+        if (car.getAttribute('data-brand') === 'honda') {
+            car.style.display = 'flex';
+        } else {
+            car.style.display = 'none';
+        }
+    });
+
+    brandButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const brand = button.getAttribute('data-brand');
+
+            cars.forEach(car => {
+                if (car.getAttribute('data-brand') === brand) {
+                    car.style.display = 'flex';
+                } else {
+                    car.style.display = 'none';
+                }
+            });
+        });
+
+
+    });
+
+    // Mostrar modal al hacer clic en "Ver lista"
+    document.querySelector('.see_list').addEventListener('click', function() {
+        document.getElementById('departmentModal').style.display = 'block';
+    });
+
+    // Ocultar modal al hacer clic en el botón de cierre (x)
+    document.querySelector('.close').addEventListener('click', function() {
+        document.getElementById('departmentModal').style.display = 'none';
+    });
+
+    // Ocultar modal al hacer clic fuera del contenido del modal
+    window.addEventListener('click', function(event) {
+        if (event.target == document.getElementById('departmentModal')) {
+            document.getElementById('departmentModal').style.display = 'none';
+        }
+    });
+
+</script>
+
+</body>
+</html>
